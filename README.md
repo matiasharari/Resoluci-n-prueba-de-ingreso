@@ -1,1 +1,6 @@
-# Resoluci-n-prueba-de-ingreso
+# Resolución-prueba-de-ingreso
+
+Este programa extrae información de Rofex a traves del uso del package pyRofex para poder dar los primeros pasos en la construcción de un bot que busque oportunidades de arbitraje de tasas de interes entre las tasas implicitas que surgen del ratio entre el futuro y el spot de un determinado activo(Ft/St). Opera bajo el supuesto de que las tasas implicitas entre contratos con una misma distancia a maturity deberían tener tasas iguales. Por lo tanto, si eso no se cumple, yo puedo Tomar caución en el activo "caro"(de menor tasa tomadora implicita) y por otro lado Colocar caución en el activo barato(de  mayor tasa colocadora implicita) arbitrando de esta forma el spread entre las tasas a traves de sinteticos compuestos por un contrato de futuro y un subyacente asociados a un activo en particular.
+
+La idea detras del arbitraje es que Ft1/St1 = Ft2/St2 .Es decir, dado dos activos 1 y 2 con contratos de futuros a igual maturity, siempre que la igualdad no se cumpla vamos a poder arbitrar. Por ejemplo: Ft1/St1 > Ft2/St2. en este caso podríamos comprar un futuro del activo 2(barato) y shortear su subyacente(caro) al mismo tiempo que financiamos la operacion con una venta del futuro del activo 1(caro) y una compra de su subyacente(barato). 
+
